@@ -10,3 +10,97 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Animations */
+.animate-upDown {
+    animation: slideUpDown 1.5s ease-in-out infinite alternate;
+}
+
+.animate-upDown-reverse {
+    animation: slideUpDownReverse 1.5s ease-in-out infinite alternate;
+}
+
+.animate-bouceRight {
+    animation: bounceRight 1.5s ease-in-out infinite alternate;
+}
+
+.animate-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-grow {
+    animation: grow 0.8s ease-out forwards;
+}
+
+.animate-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.reveal-grow {
+    opacity: 0;
+    transform: scale(0.6);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(100px);
+    will-change: transform, opacity;
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    will-change: transform, opacity;
+}
+
+@keyframes grow {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpDown {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+
+@keyframes slideUpDownReverse {
+    0% {
+        transform: translateY(50px);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes bounceRight {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(50px);
+    }
+}

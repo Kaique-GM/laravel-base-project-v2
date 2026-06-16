@@ -6,12 +6,12 @@ export function initPrivacyModal() {
     const modalPrivacyContent = document.getElementById('privacyModalContent');
     const privacyButton = document.getElementById('privacyButton');
 
+    if (!modalPrivacy || !modalPrivacyContent || !privacyButton) return;
+
     if (cookiesAccepted !== 'true') {
         modalPrivacy.classList.remove('hidden');
         modalPrivacy.classList.add('flex');
     }
-
-    if (!modalPrivacy || !modalPrivacyContent || !privacyButton) return;
 
     function closePrivacyModal() {
         modalPrivacy.classList.add('hidden');
