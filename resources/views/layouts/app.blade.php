@@ -32,6 +32,8 @@
         {{ $slot }}
     </main>
 
+    <livewire:components.float-icons />
+
     <livewire:components.footer />
 
     @livewireScripts
